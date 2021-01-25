@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>6288103 Sec2 q1</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Registration</legend>
+      <form action="">
+        <label for="stuID">Student ID</label>
+        <input type="text" id="stuID" pattern="[0-9]{7}" title="######" required><br />
+        <label for="fname">First name</label>
+        <input type="text" id="fname" pattern="[A-Za-z]+" title="alphabet only" required/><br />
+        <label for="lname">Last name</label>
+        <input type="text" id="lname" pattern="[A-Za-z]+" title="alphabet only"required /><br />
+        <label for="bd">Birthday</label>
+        <input type="date" min="2000-01-01" required><br />
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="none" checked>IDK 
+        <input type="radio" name="gender" value="female">Female 
+        <input type="radio" name="gender" value="male">Male<br />
+        <label for="hob">Hobbies:</label><br />
+        <input type="checkbox" name="hob" value="baskeball">Baskeball
+        <input type="checkbox" name="hob" value="football">Football
+        <input type="checkbox" name="hob" value="program">Programming
+        <input type="checkbox" name="hob" value="photo">Photography
+        <input type="checkbox" name="hob" value="game">Gaming <br />
+
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+        
+
+      </form>
+    </fieldset>
+  </body>
+</html>
