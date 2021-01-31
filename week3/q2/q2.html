@@ -93,13 +93,11 @@
             .container {
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
                 align-items: flex-start;
             }
             .column{
-                width: 100%;
-            }
-            .dummy_box{
-                margin: 0;
+                flex: 1 0 20%;
             }
 
         }
@@ -205,8 +203,6 @@
             <div class="dummy_box pink"></div>
             <div class="dummy_box orange"></div>
         </article>
-    </article>
-    <article class="container">
         <article class="column">
             <h2>Column 4</h2>
             <section class="dummy_box green"></section>
