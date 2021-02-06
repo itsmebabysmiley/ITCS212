@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Arrays!!!</title>
+        <script type="text/javascript">
+            var friends = new Array("Ant","Joam","Pin","Boat","Stop");
+                Array.prototype.displayItems = function () {
+                    for (i = 0; i < this.length; i++) {
+                        console.log(this[i] + "");
+                    }
+                }
+    //Your code here
+            console.log(friends.sort());
+            console.log(friends.reverse());
+            friends.pop();
+            console.log(friends);
+            friends.push("Pulem")
+            console.log(friends);
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
