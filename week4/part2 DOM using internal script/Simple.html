@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Addition</title>
+        
+        <link rel="stylesheet" href="styles/simple.css" type="text/css"/>        
+        <script src="scripts/calculate.js" type="text/javascript"></script>
+        
+    </head>
+    
+    <body>
+        <div>
+            <div class="headingBlock">
+                <h2>A Very Simple Web Application</h2>
+                <h4>Addition Only</h4>
+            </div>
+            
+            <div>
+                <input id="num1" type="text" size="4"/>
+        
+                <label><img src="images/green addition op.png"></label>
+                
+                <input id="num2" type="text" size="4"/>
+                
+                <label><img src="images/blue equals op.png"></label>
+                
+                <label id="answer"></label><label id="type"></label>
+            </div>
+            
+            <div>
+                <button id="doIt" type="button">Add</button>
+            </div>
+            <div class="headingBlock">
+                <h4>Subtract Only</h4>
+            </div>
+            
+            <div>
+                <input id="num3" type="text" size="4"/>
+        
+                <label><img src="images/green subtraction op.png"></label>
+                
+                <input id="num4" type="text" size="4"/>
+                
+                <label><img src="images/blue equals op.png"></label>
+                
+                <label id="answer2"></label><label id="type2"></label>
+            </div>
+            
+            <div>
+                <button id="doIt2" type="button">Sub</button>
+            </div>
+            <div>
+                &copy; <a href="http://www.ict.mahidol.ac.th/">Faculty of Infomation and Communication Technology, Mahidol University</a>
+            </div>
+        </div>
+        <script>
+                document.getElementById("doIt").addEventListener("click", 
+                    function () {
+                        var num1 = Number(document.getElementById("num1").value);
+                        var num2 = Number(document.getElementById("num2").value);
+                        var answer = num1 + num2;
+                        var answerRef = document.getElementById("answer");
+                        var typeRef = document.getElementById("type");
+                        answerRef.innerText = answer;
+                        answerRef.className = answer >= 0? "positive" : "negative";
+                        typeRef.innerText = answer%2 == 0 ? "(even)" : "(odd)";
+                        typeRef.className = answer%2 == 0 ? "even" : "odd";
+
+                });
+                document.getElementById("doIt2").addEventListener("click", 
+                    function () {
+                        var num1 = Number(document.getElementById("num3").value);
+                        var num2 = Number(document.getElementById("num4").value);
+                        var answer = num1 - num2;
+                        var answerRef = document.getElementById("answer2");
+                        var typeRef = document.getElementById("type");
+                        answerRef.innerText = answer;
+                        answerRef.classList = answer >= 0? "(positive)" : "(negative)";
+                        typeRef.innerText = answer%2 == 0 ? "(even)" : "(odd)";
+                        typeRef.className = answer%2 == 0 ? "even" : "odd";
+
+                });
+
+        </script>
+    </body>
+
+</html>
+
+<!-- HTML comment -->
+
+
+

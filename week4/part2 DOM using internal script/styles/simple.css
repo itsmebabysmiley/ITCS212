@@ -1,0 +1,44 @@
+body {
+    font-family: arial;
+}
+
+div.headingBlock {
+    color: rgb(20, 20, 200);
+}
+
+#simple {
+    color:    red;
+}
+
+input, label, #doIt, #doIt2 {
+    font-size: 200%;
+}
+
+#doIt, #doIt2 {
+    cursor: pointer;
+}
+
+div {
+    margin: 2em;
+}
+
+.positive {
+    color: blue;
+}
+
+.negative {
+    color: red;
+}
+.even {
+    color:brown;
+}
+.even{
+    color: cornflowerblue;
+}
+
+img {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    padding: 10px;
+}
