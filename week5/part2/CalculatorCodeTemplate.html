@@ -19,6 +19,9 @@
             font-size: 28px;
             text-align: right;
         }
+        .op{
+            background-color: gray;
+        }
     </style>
 </head>
 <body style="text-align: center">
@@ -26,32 +29,32 @@
         <h1>Simple Calculator</h1>
         <input name="Screen" id="output" type="Text" size="24" value="0" readonly>
 
-        <input id="btn7" type="Button" value="  7  " onclick="">
-        <input id="btn8" type="Button" value="  8  " onclick="">
-        <input id="btn9" type="Button" value="  9  " onclick="">
-        <input id="btnmultiply" type="Button" value="  *  " onclick="">
+        <input id="btn7" type="Button" value="  7  " onclick="NumPressed('7')">
+        <input id="btn8" type="Button" value="  8  " onclick="NumPressed('8')">
+        <input id="btn9" type="Button" value="  9  " onclick="NumPressed('9')">
+        <input id="btnmultiply" type="Button" value="  *  " onclick="Operation('*')">
         <br />
 
-        <input id="btn4" type="Button" value="  4" onclick="">
-        <input id="btn5" type="Button" value="  5   " onclick="">
-        <input id="btn6" type="Button" value="  6  " onclick="">
-        <input id="btnminus" type="Button" value="   -   " onclick="">
-
-        <br />
-
-        <input id="btn1" type="Button" value="  1  " onclick="">
-        <input id="btn2" type="Button" value="  2  " onclick="">
-        <input id="btn3" type="Button" value="  3  " onclick="">
-        <input id="btnplus" type="Button" value="  +  " onclick="">
+        <input id="btn4" type="Button" value="  4" onclick="NumPressed('4')">
+        <input id="btn5" type="Button" value="  5   " onclick="NumPressed('5')">
+        <input id="btn6" type="Button" value="  6  " onclick="NumPressed('6')">
+        <input id="btnminus" type="Button" value="   -   " onclick="Operation('-')">
 
         <br />
 
-        <input id="btnC" type="Button" value="  C  " onclick="">
-        <input id="btn0" type="Button" value="  0  " onclick="">
-        <input id="btndecimal" type="Button" value="   .  " onclick="">
-        <input id="btndivide" type="Button" value="   /   " onclick="">
+        <input id="btn1" type="Button" value="  1  " onclick="NumPressed('1')">
+        <input id="btn2" type="Button" value="  2  " onclick="NumPressed('2')">
+        <input id="btn3" type="Button" value="  3  " onclick="NumPressed('3')">
+        <input id="btnplus" type="Button" value="  +  " onclick="Operation('+')">
+
         <br />
-        <input id="btnequals" style="width: 294px" type="Button" value="  =  " onclick="">
+
+        <input id="btnC" type="Button" value="  C  " onclick="Clear()">
+        <input id="btn0" type="Button" value="  0  " onclick="NumPressed('0')">
+        <input id="btndecimal" type="Button" value="   .  " onclick="Decimal()">
+        <input id="btndivide" type="Button" value="   /   " onclick="Operation('/')">
+        <br />
+        <input id="btnequals" style="width: 294px" type="Button" value="  =  " onclick="Operation('=')">
     </form>
 
     <script>
@@ -59,31 +62,66 @@
         var Accumulate = 0; // to store the result of accumulation
         var FlagNewNum = false; // To check whether the number is new number
         var PendingOp = ""; // to store the pending operation
-
-
+        var digit ='';
         function NumPressed(Num)
         {
             // If number button is pressed, show number on the screen
             //if it is still the same number, add new digit to the the number
             //else show the new number on the screen
+            if(!FlagNewNum){
+                FlagNewNum = !FlagNewNum;
+                digit = Num;
+            }else{
+                digit += Num;
+            }
+            document.getElementById("output").value = digit;
+            
         }
-
+        
         function Operation(Op)
         {
             // If operation button is pressed for first time, set the pending operation
             //else do the arithmetic of the pending opearion 
-            //and set the lastest opeaation as the new pending opeation 
+            //and set the lastest opeaation as the new pending opeation
+
+            //get value from input.
+            var input1 = document.getElementById("output").value;
+            //clear screen after click the operate.
+            digit = '';
+            if(Op == '='){
+                PendingOp += input1;
+                var result = eval(PendingOp);   //calculate from string.
+                document.getElementById("output").value = result;
+                PendingOp = '';     //reset 
+            }else{
+                PendingOp += input1 + Op;   //string of input  for example. "2+2/2"
+            }
         }
         function Decimal()
         {
             //If it is the first time of inserting number, start with 0 and follow by point (0.)
             //else if it has no decimal point before, add decimal point to the number
-            //then show number on the screen   
+            //then show number on the screen
+            if(!FlagNewNum){
+                FlagNewNum = !FlagNewNum;
+                document.getElementById("output").value = '0.';
+            }else{
+                document.getElementById("output").value += '.' ;
+            }
+            
         }
 
         function Clear() 
         {
             //Clear Entry
+            Accumulate = 0; 
+            FlagNewNum = false;
+            PendingOp = '';
+            digit = '';
+            document.getElementById("output").value = 0;
+        }
+        function Result(result){
+            
         }
     </script>
 </body>
