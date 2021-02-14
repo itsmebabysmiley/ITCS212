@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        input[type=button] {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        input[type=text] {
+            width: 280px;
+            height: 50px;
+            display: block;
+            margin: 15px auto;
+            padding: 0 10px;
+            font-size: 28px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body style="text-align: center">
+    <form name="FormCalculator">
+        <h1>Simple Calculator</h1>
+        <input name="Screen" id="output" type="Text" size="24" value="0" readonly>
+
+        <input id="btn7" type="Button" value="  7  " onclick="">
+        <input id="btn8" type="Button" value="  8  " onclick="">
+        <input id="btn9" type="Button" value="  9  " onclick="">
+        <input id="btnmultiply" type="Button" value="  *  " onclick="">
+        <br />
+
+        <input id="btn4" type="Button" value="  4" onclick="">
+        <input id="btn5" type="Button" value="  5   " onclick="">
+        <input id="btn6" type="Button" value="  6  " onclick="">
+        <input id="btnminus" type="Button" value="   -   " onclick="">
+
+        <br />
+
+        <input id="btn1" type="Button" value="  1  " onclick="">
+        <input id="btn2" type="Button" value="  2  " onclick="">
+        <input id="btn3" type="Button" value="  3  " onclick="">
+        <input id="btnplus" type="Button" value="  +  " onclick="">
+
+        <br />
+
+        <input id="btnC" type="Button" value="  C  " onclick="">
+        <input id="btn0" type="Button" value="  0  " onclick="">
+        <input id="btndecimal" type="Button" value="   .  " onclick="">
+        <input id="btndivide" type="Button" value="   /   " onclick="">
+        <br />
+        <input id="btnequals" style="width: 294px" type="Button" value="  =  " onclick="">
+    </form>
+
+    <script>
+        var Calculator = document.FormCalculator;
+        var Accumulate = 0; // to store the result of accumulation
+        var FlagNewNum = false; // To check whether the number is new number
+        var PendingOp = ""; // to store the pending operation
+
+
+        function NumPressed(Num)
+        {
+            // If number button is pressed, show number on the screen
+            //if it is still the same number, add new digit to the the number
+            //else show the new number on the screen
+        }
+
+        function Operation(Op)
+        {
+            // If operation button is pressed for first time, set the pending operation
+            //else do the arithmetic of the pending opearion 
+            //and set the lastest opeaation as the new pending opeation 
+        }
+        function Decimal()
+        {
+            //If it is the first time of inserting number, start with 0 and follow by point (0.)
+            //else if it has no decimal point before, add decimal point to the number
+            //then show number on the screen   
+        }
+
+        function Clear() 
+        {
+            //Clear Entry
+        }
+    </script>
+</body>
+</html>
