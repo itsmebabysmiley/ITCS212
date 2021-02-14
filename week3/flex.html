@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test flex</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: #ffe4c4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            height: 50px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 20px;
+            background-color: #ECF0F1;
+            border: solid #95A5A6 2px;
+        }
+        @media screen and (min-width: 768px) {
+            .container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .column{
+                flex: 1 0 27%;
+                
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="margin: 0; padding:0; ">Test flex-direction</h1>
+    </header>
+    <body>
+        <div class="container">
+            <div class="column"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dolore est minima nemo. Maxime, ullam voluptates voluptatibus sit minima velit perspiciatis magni reiciendis quo, placeat natus. Blanditiis voluptate iure accusamus?</div>
+            <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis maxime libero provident odio ut, saepe dolore optio aperiam reprehenderit, aspernatur nihil soluta eligendi facilis corrupti natus, nam officia qui.</div>
+            <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis maxime libero provident odio ut, saepe dolore optio aperiam reprehenderit, aspernatur nihil soluta eligendi facilis corrupti natus, nam officia qui.</div>
+
+            <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis maxime libero provident odio ut, saepe dolore optio aperiam reprehenderit, aspernatur nihil soluta eligendi facilis corrupti natus, nam officia qui.</div>
+            <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis maxime libero provident odio ut, saepe dolore optio aperiam reprehenderit, aspernatur nihil soluta eligendi facilis corrupti natus, nam officia qui.</div>
+            <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis maxime libero provident odio ut, saepe dolore optio aperiam reprehenderit, aspernatur nihil soluta eligendi facilis corrupti natus, nam officia qui.</div>
+        </div>
+    </body>
+    
+</body>
+</html>
