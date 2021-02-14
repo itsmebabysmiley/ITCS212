@@ -14,12 +14,13 @@
         <div id = "name">
             <span id = "firstName"></span>
             <span id = "lastName"></span>
-            <span id = "nickName"></span>
         </div>
         <script type="application/javascript">
             /* ----- Your JS code is here ----- */
             var myname = new Array("Nopparat", "Pengsuk", "Smiley");
             /* 1. Append a new <span> with id = "nickName"  */
+            var ele = document.createElement("span");
+            document.getElementById("name").appendChild(ele);
             /* 2. Insert your name for the content of each <span> */
             /* 3. Apply all <span> with the class "myFont"  */
             var span = document.getElementsByTagName("span");

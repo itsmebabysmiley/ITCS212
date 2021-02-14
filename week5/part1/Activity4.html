@@ -129,6 +129,7 @@
         function generateMsg(){
             /* 1. Hide <div>: div_form */
             document.getElementById("div_form").style.display = "none";
+            document.getElementById("h1_title").innerText = "Thank you";
             /* 2. Generate the following "Thank you" message: 
                 Dear [customer username], 
                 Thank you for your message. 
@@ -165,10 +166,10 @@
       <div class="form-right-decoration"></div>
       <div class="circle"></div>
       <div class="form-inner" >
+        <h1 id="h1_title">Contact us</h1>
         <div id="div_thk">
         </div>
         <div id="div_form">
-            <h1 id="h1_title">Contact us</h1>
             <input type="text" placeholder="Username" id="txtUsername" name="username">
             <input type="email" placeholder="Email" id="txtEmail" name="email">
             <textarea placeholder="Message..." rows="3" id="txtMessages"></textarea>
