@@ -144,17 +144,17 @@
             var uname = document.getElementById("txtUsername").value;
             var email = document.getElementById("txtEmail").value;
             var utext = document.getElementById("txtMessages").value;
-            var reply_text = "Dear " + uname + ", \n \
-                              Thank you for your message. \n \
-                              ------------------------ \n" 
+            var reply_text = "Dear <b>" + uname + "</b>, <br> \
+                              Thank you for your message. <br> \
+                              ------------------------ <br>" 
                               + utext + 
-                              "\n------------------------ \n" + 
-                              "We will contact you via [" + email +
-                              "]\n within 3 business days \n \
-                              Sincerely, \n \
+                              "<br>------------------------ <br>" + 
+                              "We will contact you via <b>" + email +
+                              "</b><br> within 3 business days <br><br> \
+                              Sincerely, <br> \
                               Nopparat" 
             /* 3. Show the generated message in the <div> "div_thk"*/
-            document.getElementById("div_thk").innerText = reply_text;
+            document.getElementById("div_thk").innerHTML = reply_text;
         }
     /* ==========  Activity 4 ends here  ========== */
     </script>

@@ -10,7 +10,6 @@
                     this.year = _year;
                     
                 }
-
                 /* Method */
                 getTitle(){
                     /* Format: "Title: [title]" */
@@ -18,18 +17,15 @@
                 }
                 getReleasedYear(){
                     /* Format: "Year: [year]" */ 
-                    return "released in Year:"+this.year;
+                    return " released in Year:"+this.year;
                 }
             }
-            
             /* Create two objects of the Movie class 
                Example:
                let movie1 = new Movie("Harry Potter and the Goblet of Fire", 2005)
             */
             let movie1 = new Movie("Harry Potter and the Goblet of Fire", 2005);
             let movie2 = new Movie("Spider-Man: Far From Home",2019);
-            
-
             /* Call methods to display the following format in the console 
                Title: [title] released in Year: [year]
                Example: 
@@ -37,9 +33,6 @@
             */
             console.log(movie1.getTitle()+movie1.getReleasedYear());
             console.log(movie2.getTitle()+movie2.getReleasedYear());
-
-
-
             /* ==========  Activity 1 ends here  ========== */
         </script>
     </body>

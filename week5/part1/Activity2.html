@@ -8,7 +8,6 @@
                     this.title = _title; /* title type of string */ 
                     this.year = _year;   /* year type of int */
                 }
-
                 /* Method */
                 getTitle(){
                     return "Title: " + this.title;
@@ -17,7 +16,6 @@
                     return "Year: " + this.year;
                 }
             }
-
             /* ----- Your JS code is here ----- */
             /* Extend the Movie class to create a subclass */
             class ThaiMovie extends Movie{
@@ -27,15 +25,12 @@
                     super(_title,_year);
                     this.titleTh = _titleTH;
                 }
-
                 /* Methods */
                 getFullTitle(){
                     /* Format: [titleTH]([title]) */
                     return this.titleTh +' ('+ super.getTitle() +') ' + 'release in ' + super.getReleasedYear();
                 }
-
             }
-            
             /* Create two objects of the ThaiMovie class 
                Example:
                let movie1 = new ThaiMovie("Mr Deu",2019,"มิสเตอร์ดื้อ กันท่าเหรียญทอง");
