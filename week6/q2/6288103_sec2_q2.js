@@ -22,7 +22,9 @@ expressApp.get('/cn', (req, res) => {
 
 });
 expressApp.get('/*', (req, res) => {
-    console.log("Req at:"+ req.url);
+    if(req.url !== '/favicon.ico'){
+        console.log("Req at:"+ req.url);
+    }
     res.send('Where are you going?');
 
 });
