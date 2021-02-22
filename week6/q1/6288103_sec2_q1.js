@@ -8,9 +8,10 @@ const url = require("url");
 const myQ1Server = http.createServer((req, res)=> {
     const userPath = req.url;       // Path
     /* ------ Your code goes here ------ */
-
+    if(userPath !== "/favicon.ico"){
+        console.log("Req at: "+userPath);
+    }
     // #1:Root: When path is "/", repond with the plain text as “Hello World! in plain text” (status:200)
-    console.log("Req at: "+userPath);
     if(userPath === "/"){
         res.statusCode = 200;
         res.setHeader("Content-Type","text/plain");
