@@ -21,7 +21,11 @@ expressApp.get('/cn', (req, res) => {
     res.status(200).sendFile(path.join(__dirname,'/greeting_cn.html'));
 
 });
+expressApp.get('/*', (req, res) => {
+    console.log("Req at:"+ req.url);
+    res.send('Where are you going?');
 
+});
 //sever start on port 3030
 expressApp.listen(3030, function(){
     console.log("listening on port 3030");
