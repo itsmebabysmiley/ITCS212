@@ -11,13 +11,13 @@ expressApp.get('/', (req, res) => {
 });
 expressApp.get('/th', (req, res) => {
     console.log("Req at:"+ req.url);
-    res.setHeader("Content-Type","text/html; charset=utf-8;");
+    res.type("text/html; charset=utf-8;");
     res.status(200).sendFile(path.join(__dirname,'/greeting_th.html'));
 
 });
 expressApp.get('/cn', (req, res) => {
     console.log("Req at:"+ req.url);
-    res.setHeader("Content-Type","text/html; charset=utf-8;");
+    res.type("text/html; charset=utf-8;");
     res.status(200).sendFile(path.join(__dirname,'/greeting_cn.html'));
 
 });
