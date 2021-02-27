@@ -3,8 +3,9 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const bp = require("body-parser");
-const env = require("dotenv").config({ path: __dirname + "/dotenv.env" });
 const mysql = require("mysql");
+//import env file
+const env = require("dotenv").config({ path: __dirname + "/dotenv.env" });
 /* Router Module for handling routing */
 const router = express.Router();
 app.use("/", router);
