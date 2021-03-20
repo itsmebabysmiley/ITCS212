@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q1</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="input">Search: </label>
+        <input type="search" name="search" id="input">
+        <button type="button" onclick="getConferenceResponses()">Submit</button>
+    </form>
+    <h1 id="header"></h1>
+    <div id="output"> </div>
+</body>
+</html>
+<script>
+    function getConferenceResponses() {
+        var query = document.getElementById("input").value; // Get query from a textbox
+        console.log(query);
+        document.getElementById("header").innerHTML = "<h3>Food list</h3>";
+        
+        var APi_key = "c425f3e92397425fa0ca18b93364dbac";
+        let rooturl =
+        "https://api.spoonacular.com/recipes/search?apiKey=" +
+        APi_key +"&query="+query;
+        console.log(rooturl);
+       
+        fetch(rooturl)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            var list = "<ul>";
+            for(const x of data.results){
+                list += "<li>"+"<p>"+x.title+"</p>"+'<img src="'+data.baseUri+x.image+'"width=\"200px\" height=\"200px\" style="margin:30px 30px">'+"</li>";
+            }
+            list += "</ul>";
+            document.getElementById("output").innerHTML += list;
+          
+        })
+        .catch((error) => console.log(error));
+        
+        }
+</script>
