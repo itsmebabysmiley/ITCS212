@@ -24,7 +24,7 @@
         
         var APi_key = "c425f3e92397425fa0ca18b93364dbac";
         let rooturl =
-        "https://api.spoonacular.com/recipes/search?apiKey=" +
+        "https://api.spoonacular.com/recipes/complexSearch?apiKey=" +
         APi_key +"&query="+query;
         console.log(rooturl);
        
@@ -34,7 +34,7 @@
             console.log(data);
             var list = "<ul>";
             for(const x of data.results){
-                list += "<li>"+"<p>"+x.title+"</p>"+'<img src="'+data.baseUri+x.image+'"width=\"200px\" height=\"200px\" style="margin:30px 30px">'+"</li>";
+                list += "<li>"+"<p>"+x.title+"</p>"+'<img src="'+x.image+'"width=\"200px\" height=\"200px\" style="margin:30px 30px">'+"</li>";
             }
             list += "</ul>";
             document.getElementById("output").innerHTML += list;
