@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q2</title>
+    <script src="/q2/StudentService.js"></script>
+    
+</head>
+<body>
+    <div>
+        <form action="/search" method="post">
+            <h1>Search Student ID</h1>
+            <input type="text" name="id">
+            <button type="submit">search</button>    
+        </form>
+    </div>
+    <div>
+        <form action="/searchall" method="get">
+            <h1>Search Student</h1>
+            <button type="submit">search</button>    
+        </form>
+    </div>
+    
+    <div>
+        <form action="/add" method="post">
+            <h1>Add new student</h1>
+            <label for="stuid">ID: </label>
+            <input type="text" name="StudentID"> <br/>
+            <label for="stufname">First name: </label>
+            <input type="text" name="Firstname" placeholder="Payut" required> <br />
+            <label for="stulname">Last name: </label>
+            <input type="text" name="Lastname" placeholder="Chan-0-cha" required> <br />
+            <label for="stubdate">Birth day:</label>
+            <input type="text" name="Birthdate" placeholder="YYYY-MM-DD" required> <br />
+            <label for="stuphone">Mobile phone: </label>
+            <input type="text" name="MobilePhone" placeholder="xxxxxxxxxx" required> <br />
+            <button type="submit">Submit</button>    
+        </form>
+    </div>
+    <div>
+        <form action="/update" method="post">
+            <h1>Update Student mobile phone</h1>
+            <label for="stuid">Insert Student ID</label>
+            <input type="text" name="StudentID"> <br />
+            <label for="stuphone">Mobile phone:</label>
+            <input type="text" name="MobilePhone"> <br />
+            <button type="submit">Submit</button>    
+        </form>
+    </div>
+    <div>
+        <form action="/delete" method="post">
+            <h1>delete Student</h1>
+            <label for="stuid">Insert Student ID</label>
+            <input type="text" name="StudentID">
+            <button type="submit">Submit</button>    
+        </form>
+    </div>
+    <div id="test"></div>
+</body>
+</html>
