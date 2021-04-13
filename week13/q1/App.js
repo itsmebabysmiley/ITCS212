@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
-import Contact from "./components/contact";
+// import Contact from "./components/contact";
 import Recipe from "./components/recipe";
 import Menu from "./components/menu";
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Switch>
-            <Route path="/contact" component={Contact} />
+//             <Route path="/contact" component={Contact} />
             <Route path="/menu" component={Menu} />
             <Route path="/recipe" component={Recipe} />
             <Route path="/" component={Home} />
