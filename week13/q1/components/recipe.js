@@ -1,49 +1,54 @@
 import React from "react";
 import styled from 'styled-components';
-const Mydiv = styled.div`
+const MyRow = styled.div`
 display:flex;
-flex-direction: row;
+flex-direction: row wrap;
+flex-wrap: wrap;
 justify-content: center;`
-const Myform = styled.form`
+const MyColum = styled.div`
 display:flex;
-flex-direction: column;
-justify-content: center;
-margin: 30px;
+`
+const Myform = styled.form`
+margin: 35px;
 `
 class Recipe extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      food: ""
+      Food: ''
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   
   handleChange(e) {
     this.setState(
         { 
-            food: e.target.food 
+          [e.target.name] : e.target.value
         });
+  }
+  handleSubmit(e){
+    console.log(this.state.Food);
+    e.preventDefault();
   }
   render() {
     return (
       <div>
-        <Mydiv>
-            <h1>Explore Recipe</h1>
-            <Myform>
-            <form>
-            <label>Are you looking for somthing to cook? </label>
-            <input
-                name="food"
-                type="text"
-                value={this.state.food}
-                onChange={this.handleChange}
-            />
-            <button type="button">Go</button>
-            </form>
-            </Myform>
-        </Mydiv>
-      </div>
+      <MyRow>
+        <MyColum>
+          <h1>Explore Recipe</h1>
+        </MyColum>
+        <MyColum>
+          <Myform onSubmit={this.handleSubmit}>
+            <label>
+              Are you looking for someting to eat? 
+              <input name='Food' type="text" value={this.state.Food} onChange={this.handleChange} />
+            </label>
+            <button type="submit" value="Submit">Go</button>
+          </Myform>
+        </MyColum>
+      </MyRow>
+    </div>
     );
   }
 }
