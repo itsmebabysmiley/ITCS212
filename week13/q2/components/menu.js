@@ -85,6 +85,7 @@ class Results extends React.Component{
     render(){
         return (
             <MyRow>
+                 //this.props.results is from line 76.
                 {this.props.results && this.props.results.map(data =>{
                     return (
                         <Content>
