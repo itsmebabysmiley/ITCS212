@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/style'); %>
+    <title>Student</title>
+</head>
+<body>
+    <%- include('./partials/header'); %>
+    <div class="container">
+        <div class="row" style="margin-top:30px">
+            <div class="col-md-12">
+              <h1>Student</h1>
+              <table class="table">
+                  <tr class="table-dark">
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Age</th>
+                      <th>Email</th>
+                  </tr>
+                  <!-- Get Data from the Controller: courses -->
+                  <% for(var i=0; i < data.length; i++) { %>
+                  <tr>
+                      <td><%= data[i].firstname   %></td>
+                      <td><%= data[i].lastname %></td>
+                      <td><%= data[i].email   %></td>
+                      <td><%= data[i].age   %></td>
+                  </tr>
+                  <% } %>
+              </table>
+          </div>
+    </div>
+
+    <%- include('./partials/footer'); %>
+</body>
+</html>

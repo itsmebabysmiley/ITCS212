@@ -1,0 +1,32 @@
+[
+    {
+        "name" : "HTML/HTML5",
+        "module" : 1, 
+        "type" : "Client-side"
+    },
+    {   
+        "name" : "CSS+Bootstrap",
+        "module" : 2, 
+        "type" : "Client-side"
+    },  
+    {
+        "name" : "JavaScript",
+        "module" : 3, 
+        "type" : "Client-side"
+    },
+    {   
+        "name" : "Node.js",
+        "module" : 4, 
+        "type" : "Server-side"
+    },
+    {   
+        "name" : "Web Service",
+        "module" : 5, 
+        "type" : "Server-side"
+    },
+    {   
+        "name" : "React",
+        "module" : 6, 
+        "type" : "Client-side"
+    }      
+]
