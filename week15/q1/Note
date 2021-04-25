@@ -1,0 +1,11 @@
+#change/add files
+- add.js
+- Directory
+    views
+        1. /patials
+            1.header.ejs
+        2. student.ejs
+    routers
+        1. studentinfo-router.js
+    models
+        1. student-model.js

@@ -1,0 +1,122 @@
+[
+  {
+    "firstname": "Arnas",
+    "lastname": "Kent",
+    "email": "arnas.ken@mahidol.edu",
+    "age": 17
+  },
+  {
+    "firstname": "Sanaya",
+    "lastname": "Maldonado",
+    "email": "sanaya.mal@mahidol.edu",
+    "age": 19
+  },
+  {
+    "firstname": "Alara",
+    "lastname": "Mcarthur",
+    "email": "alara.mca@mahidol.edu",
+    "age": 22
+  },
+  {
+    "firstname": "Aayat",
+    "lastname": "Mack",
+    "email": "aayat.mac@mahidol.edu",
+    "age": 17
+  },
+  {
+    "firstname": "Kaya",
+    "lastname": "Bain",
+    "email": "kaya.bai@mahidol.edu",
+    "age": 19
+  },
+  {
+    "firstname": "Glenda",
+    "lastname": "House",
+    "email": "glenda.hou@mahidol.edu",
+    "age": 21
+  },
+  {
+    "firstname": "Manahil",
+    "lastname": "Sweeney",
+    "email": "manahil.swe@mahidol.edu",
+    "age": 18
+  },
+  {
+    "firstname": "Asha",
+    "lastname": "Ho",
+    "email": "asha.ho@mahidol.edu",
+    "age": 21
+  },
+  {
+    "firstname": "Joanna",
+    "lastname": "Gross",
+    "email": "joanna.gro@mahidol.edu",
+    "age": 22
+  },
+  {
+    "firstname": "Emmanuel",
+    "lastname": "Briggs",
+    "email": "emmanuel.bri@mahidol.edu",
+    "age": 17
+  },
+  {
+    "firstname": "Rhian",
+    "lastname": "Sierra",
+    "email": "rhian.sie@mahidol.edu",
+    "age": 20
+  },
+  {
+    "firstname": "Kareem",
+    "lastname": "Swift",
+    "email": "kareem.swi@mahidol.edu",
+    "age": 17
+  },
+  {
+    "firstname": "Ariel",
+    "lastname": "Milne",
+    "email": "ariel.mil@mahidol.edu",
+    "age": 21
+  },
+  {
+    "firstname": "Lynsey",
+    "lastname": "Tran",
+    "email": "lynsey.tra@mahidol.edu",
+    "age": 22
+  },
+  {
+    "firstname": "Omari",
+    "lastname": "Harrington",
+    "email": "omari.har@mahidol.edu",
+    "age": 21
+  },
+  {
+    "firstname": "Hamish",
+    "lastname": "Bauer",
+    "email": "hamish.bau@mahidol.edu",
+    "age": 21
+  },
+  {
+    "firstname": "Donna",
+    "lastname": "Rojas",
+    "email": "donna.roj@mahidol.edu",
+    "age": 19
+  },
+  {
+    "firstname": "Daniaal",
+    "lastname": "Kennedy",
+    "email": "daniaal.ken@mahidol.edu",
+    "age": 21
+  },
+  {
+    "firstname": "Hajrah",
+    "lastname": "Edmonds",
+    "email": "hajrah.edm@mahidol.edu",
+    "age": 18
+  },
+  {
+    "firstname": "Nadir",
+    "lastname": "Gutierrez",
+    "email": "nadir.gut@mahidol.edu",
+    "age": 21
+  }
+]

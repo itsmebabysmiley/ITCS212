@@ -1,0 +1,11 @@
+#change/add files
+- app.js
+- Directory 
+    views
+        1.homepage.ejs
+    routers
+        1.home-router.js
+    resources/data
+        1.dbconnection.js
+    models 
+        1. reminder-model.js
